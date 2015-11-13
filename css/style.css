@@ -1,21 +1,29 @@
 /* font */
-.fontArcgutects{
-font-family: 'Architects Daughter', cursive;
+.fontWalter{
+font-family: 'Walter Turncoat', cursive;
 }
 
 /* color */
-.colorWhite{
-color:#FFFFFF
-}
+
 
 /* main */
 html,body{
 	padding:0;
-	margin:0;	
+	margin:0;
+	overflow-x:hidden;
+}
+
+a{
+	text-decoration:none;
+	color:#ffffff;	
+}
+
+a:focus{
+ outline:none;	
 }
 
 .clear{
-	clear:both
+	clear:both;
 }
 
 #leftPart{
@@ -27,11 +35,6 @@ html,body{
     background-position: contain;
     background-size: cover;
 	z-index:10;
-	-webkit-transition: background 0.5s linear;
-    -moz-transition: background 0.5s linear;
-    -ms-transition: background 0.5s linear;
-    -o-transition: background 0.5s linear;
-     transition: background 0.5s linear;
 }
 
 #rightPart{
@@ -45,17 +48,6 @@ html,body{
 	z-index:10
 }
 
-#leftNav ul li{
-	list-style:none;
-	font-size:1.5vw;
-}
-
-#leftTopNav ul li{
-	list-style:none;
-	float:left;
-	font-size:1.5vw;
-}
-
 .col-cl-4{
 width:33.33333333%;
 float:left;
@@ -64,5 +56,238 @@ float:left;
 .col-cl-8{
 width: 66.66666667%;
 float:left;
+}
+
+#leftMask a{
+	position:absolute;
+	cursor:pointer;	
+	transition:all 0.8s ease;
+	-webkit-transition:all 0.8s ease;
+	font-size:4vw;
+	display:inline-block;
+	color:rgba(255,255,255,0.6)
+}
+#leftMask a:hover{
+	color:rgba(255,255,255,1)
+}
+
+.sibilngsMove {
+	-webkit-animation-name: sibMove; 
+    -webkit-animation-duration: 1s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: sibMove;
+    animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes sibMove{
+	from{transform:scale(1)}
+	to{transform:scale(0);}	
+}
+
+.education{
+	left:5%;
+	top:11%;
+	-ms-transform: rotate(-10deg); 
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);	
+}
+.educationMove{
+	color:#ffffff !important;
+	width:100%;
+	text-align:center;
+	left:0;
+	-webkit-animation-name: eduMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: eduMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes eduMove{
+	0%{transform:rotate(-10deg);top:11%;}
+	50%{transform:rotate(0deg);top:11%;}
+	65%{transform:rotate(0deg);top:15%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+@-webkit-keyframes eduMove{
+	0%{transform:rotate(-10deg);top:11%;}
+	50%{transform:rotate(0deg);top:11%;}
+	65%{transform:rotate(0deg);top:15%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+.eduBefore{
+	-webkit-animation-name: eduBeforeMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: eduBeforeMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes eduBeforeMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+@-webkit-keyframes eduBeforeMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+
+
+.career{
+	top:45%;
+	left:3%;
+	-ms-transform: rotate(-30deg); 
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);	
+}
+.careerMove{
+	color:#ffffff !important;
+	width:100%;
+	text-align:center;
+	left:0;
+	-webkit-animation-name: carMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: carMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes carMove{
+	0%{transform:rotate(-10deg);top:55%;}
+	50%{transform:rotate(0deg);top:55%;}
+	65%{transform:rotate(0deg);top:59%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+@-webkit-keyframes carMove{
+	0%{transform:rotate(-10deg);top:55%;}
+	50%{transform:rotate(0deg);top:55%;}
+	65%{transform:rotate(0deg);top:59%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+.careerAfter:after{
+	content:"profession"	;
+}
+.careerAfter{
+	opacity:0;	
+}
+.careerAfterMove{
+	-webkit-animation-name: carAfterMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: carAfterMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+.carBefore{
+	-webkit-animation-name: carBeforeMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: carBeforeMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes carBeforeMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	98%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+@-webkit-keyframes carBeforeMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	98%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+@keyframes carAfterMove{
+	0%{opacity:0;}
+	70%{opacity:0;}
+	99%{opacity:1;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes carAfterMove{
+	0%{opacity:0;}
+	70%{opacity:0;}
+	99%{opacity:1;}
+	100%{opacity:1;}
+}
+
+
+.design{
+	top:80%;
+	left:25%;
+	-ms-transform: rotate(5deg); 
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);	
+}
+.designMove{
+	color:#ffffff !important;
+	width:100%;
+	text-align:center;
+	left:0;
+	-webkit-animation-name: dsgMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: dsgMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes dsgMove{
+	0%{transform:rotate(5deg);top:80%;}
+	50%{transform:rotate(0deg);top:80%;}
+	65%{transform:rotate(0deg);top:84%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+@-webkit-keyframes carMove{
+	0%{transform:rotate(5deg);top:80%;}
+	50%{transform:rotate(0deg);top:80%;}
+	65%{transform:rotate(0deg);top:84%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+.dsgAfter{
+	-webkit-animation-name: dsgAfterMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: dsgAfterMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes dsgAfterMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+@-webkit-keyframes dsgAfterMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+
+.about{
+	top:25%;
+	left:34%;
+	-ms-transform: rotate(1deg); 
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);	
+}
+
+
+.contact{
+	top:55%;
+	left:40%;
+	-ms-transform: rotate(-5deg); 
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);	
 }
 
