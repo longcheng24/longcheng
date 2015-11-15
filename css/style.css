@@ -63,7 +63,7 @@ float:left;
 	cursor:pointer;	
 	transition:all 0.8s ease;
 	-webkit-transition:all 0.8s ease;
-	font-size:4vw;
+	font-size:3.5vw;
 	display:inline-block;
 	color:rgba(255,255,255,0.6)
 }
@@ -93,9 +93,6 @@ float:left;
 }
 .educationMove{
 	color:#ffffff !important;
-	width:100%;
-	text-align:center;
-	left:0;
 	-webkit-animation-name: eduMove; 
     -webkit-animation-duration: 3s; 
 	-webkit-animation-fill-mode: forwards;
@@ -126,16 +123,16 @@ float:left;
 	animation-fill-mode: forwards;
 }
 @keyframes eduBeforeMove{
-	0%{opacity:1;position:relative}
-	70%{opacity:1;position:relative}
-	99%{opacity:0;position:relative}
-	100%{opacity:0;position:absolute}
+	0%{opacity:1;}
+	70%{opacity:1;}
+	99%{opacity:0;}
+	100%{opacity:0;}
 }
 @-webkit-keyframes eduBeforeMove{
-	0%{opacity:1;position:relative}
-	70%{opacity:1;position:relative}
-	99%{opacity:0;position:relative}
-	100%{opacity:0;position:absolute}
+	0%{opacity:1;}
+	70%{opacity:1;}
+	99%{opacity:0;}
+	100%{opacity:0;}
 }
 
 
@@ -148,9 +145,6 @@ float:left;
 }
 .careerMove{
 	color:#ffffff !important;
-	width:100%;
-	text-align:center;
-	left:0;
 	-webkit-animation-name: carMove; 
     -webkit-animation-duration: 3s; 
 	-webkit-animation-fill-mode: forwards;
@@ -159,16 +153,16 @@ float:left;
 	animation-fill-mode: forwards;
 }
 @keyframes carMove{
-	0%{transform:rotate(-10deg);top:55%;}
-	50%{transform:rotate(0deg);top:55%;}
-	65%{transform:rotate(0deg);top:59%;}
+	0%{transform:rotate(-30deg);top:45%;}
+	50%{transform:rotate(0deg);top:45%;}
+	65%{transform:rotate(0deg);top:49%;}
 	70%{transform:rotate(0deg);top:0%;}
 	100%{transform:rotate(0deg);top:0%;}
 }
 @-webkit-keyframes carMove{
-	0%{transform:rotate(-10deg);top:55%;}
-	50%{transform:rotate(0deg);top:55%;}
-	65%{transform:rotate(0deg);top:59%;}
+	0%{transform:rotate(-30deg);top:45%;}
+	50%{transform:rotate(0deg);top:45%;}
+	65%{transform:rotate(0deg);top:49%;}
 	70%{transform:rotate(0deg);top:0%;}
 	100%{transform:rotate(0deg);top:0%;}
 }
@@ -195,16 +189,16 @@ float:left;
 	animation-fill-mode: forwards;
 }
 @keyframes carBeforeMove{
-	0%{opacity:1;position:relative}
-	70%{opacity:1;position:relative}
-	98%{opacity:0;position:relative}
-	100%{opacity:0;position:absolute}
+	0%{opacity:1;}
+	70%{opacity:1;}
+	98%{opacity:1;}
+	100%{opacity:0;}
 }
 @-webkit-keyframes carBeforeMove{
-	0%{opacity:1;position:relative}
-	70%{opacity:1;position:relative}
-	98%{opacity:0;position:relative}
-	100%{opacity:0;position:absolute}
+	0%{opacity:1;}
+	70%{opacity:1;}
+	98%{opacity:1;}
+	100%{opacity:0;}
 }
 @keyframes carAfterMove{
 	0%{opacity:0;}
@@ -229,9 +223,6 @@ float:left;
 }
 .designMove{
 	color:#ffffff !important;
-	width:100%;
-	text-align:center;
-	left:0;
 	-webkit-animation-name: dsgMove; 
     -webkit-animation-duration: 3s; 
 	-webkit-animation-fill-mode: forwards;
@@ -281,6 +272,50 @@ float:left;
     -webkit-transform: rotate(1deg);
     transform: rotate(1deg);	
 }
+.aboutMove{
+	color:#ffffff !important;
+	-webkit-animation-name: abtMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: abtMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes abtMove{
+	0%{transform:rotate(1deg);top:25%;}
+	50%{transform:rotate(0deg);top:25%;}
+	65%{transform:rotate(0deg);top:29%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+@-webkit-keyframes abtMove{
+	0%{transform:rotate(1deg);top:25%;}
+	50%{transform:rotate(0deg);top:25%;}
+	65%{transform:rotate(0deg);top:29%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+.aboutAfterMove{
+	-webkit-animation-name: abtAfterMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: abtAfterMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes abtAfterMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+@-webkit-keyframes abtAfterMove{
+	0%{opacity:1;position:relative}
+	70%{opacity:1;position:relative}
+	99%{opacity:0;position:relative}
+	100%{opacity:0;position:absolute}
+}
+
 
 
 .contact{
@@ -290,4 +325,74 @@ float:left;
     -webkit-transform: rotate(-5deg);
     transform: rotate(-5deg);	
 }
+.contactMove{
+	color:#ffffff !important;
+	-webkit-animation-name: ctcMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: ctcMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes ctcMove{
+	0%{transform:rotate(-5deg);top:55%;}
+	50%{transform:rotate(0deg);top:55%;}
+	65%{transform:rotate(0deg);top:59%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+@-webkit-keyframes ctcMove{
+	0%{transform:rotate(-5deg);top:55%;}
+	50%{transform:rotate(0deg);top:55%;}
+	65%{transform:rotate(0deg);top:59%;}
+	70%{transform:rotate(0deg);top:0%;}
+	100%{transform:rotate(0deg);top:0%;}
+}
+.contactAfter:after{
+	content:"contact"	;
+}
+.contactAfter{
+	opacity:0;	
+}
+.contactAfterMove{
+	-webkit-animation-name: ctcAfterMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: ctcAfterMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes ctcAfterMove{
+	0%{opacity:0;}
+	70%{opacity:0;}
+	99%{opacity:1;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes ctcAfterMove{
+	0%{opacity:0;}
+	70%{opacity:0;}
+	99%{opacity:1;}
+	100%{opacity:1;}
+}
+.ctcBefore{
+	-webkit-animation-name: ctcBeforeMove; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: ctcBeforeMove;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes ctcBeforeMove{
+	0%{opacity:1;}
+	70%{opacity:1;}
+	98%{opacity:0;}
+	100%{opacity:0;}
+}
+@-webkit-keyframes ctcBeforeMove{
+	0%{opacity:1;}
+	70%{opacity:1;}
+	98%{opacity:0;}
+	100%{opacity:0;}
+}
+
 
