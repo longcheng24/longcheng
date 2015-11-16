@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
 	
-	//homepage two parts move
+	/* homepage two parts move */
 	function leftPartClick(){
 		$("#leftPart").off("click")
 		$("#rightPart").off("click")
@@ -41,7 +41,12 @@ $(document).ready(function(){
 	$("#leftPart").on("click",leftPartClick)
 	$("#rightPart").on("click",rightPartClick)
 	
-	//left part animation
+	/* left part menus animation */
+	//Remove poitner
+	$("#leftMask a").click(function(){
+		$(this).css("cursor","default");	
+	})
+	
 	$("#education").click(function(){
 		$(this).addClass("educationMove");
 		$("#education span:first-child").addClass("eduBefore");
@@ -96,5 +101,6 @@ $(document).ready(function(){
 			$("#about").css("left",leftPosition)
 		},2800)
 	})
+	
 	
 })
