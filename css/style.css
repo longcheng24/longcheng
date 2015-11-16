@@ -4,7 +4,9 @@ font-family: 'Walter Turncoat', cursive;
 }
 
 /* color */
-
+.colorWhite{
+	color:#ffffff	
+}
 
 /* main */
 html,body{
@@ -48,6 +50,11 @@ a:focus{
 	z-index:10
 }
 
+.col-cl-1{
+width:8.33333333%;
+float:left;
+}
+
 .col-cl-4{
 width:33.33333333%;
 float:left;
@@ -56,6 +63,11 @@ float:left;
 .col-cl-8{
 width: 66.66666667%;
 float:left;
+}
+
+.col-cl-11{
+width:91.66666667%;
+float:left;	
 }
 
 #leftMask a{
@@ -395,4 +407,13 @@ float:left;
 	100%{opacity:0;}
 }
 
+#leftContent{
+	position:absolute;
+	padding:0 50px;
+}
 
+#goBack{
+	position:absolute;
+	right:0;	
+	cursor:pointer;
+}

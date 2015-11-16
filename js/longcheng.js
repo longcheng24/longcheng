@@ -41,19 +41,24 @@ $(document).ready(function(){
 	$("#leftPart").on("click",leftPartClick)
 	$("#rightPart").on("click",rightPartClick)
 	
+	/*Set #leftContent top*/
+	var navheight = $("#leftMask a").height();
+	$("#leftContent").css("top",navheight);
+	
 	/* left part menus animation */
 	//Remove poitner
 	$("#leftMask a").click(function(){
 		$(this).css("cursor","default");	
 	})
 	
+	//menus animation start
 	$("#education").click(function(){
 		$(this).addClass("educationMove");
 		$("#education span:first-child").addClass("eduBefore");
 		$(this).siblings().addClass("sibilngsMove");
 		setTimeout(function(){
 			var leftPosition = ($(window).width()*0.9/2) - $("#education span:first-child").width() - ($("#education span:nth-child(2)").width())/2
-			$("#education").css("left",leftPosition)
+			$("#education").css("left",leftPosition);
 		},2800)
 	})
 	
@@ -100,6 +105,13 @@ $(document).ready(function(){
 			var leftPosition = ($(window).width()*0.9 - $("#about span:first-child").width())/2
 			$("#about").css("left",leftPosition)
 		},2800)
+	})
+	
+	/* Left close button */
+	$("#goBack").click(function(){
+		$("#education").removeClass("educationMove");
+		$("#education span:first-child").removeClass("eduBefore");
+		$("#leftMask a").removeClass("sibilngsMove");
 	})
 	
 	
