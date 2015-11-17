@@ -203,7 +203,7 @@ function render() {
   x1=xb||Math.sin(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   y1=yb||Math.cos(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   
-  t+=0.02;
+  t+=0.04;
   x2=Math.sin(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   y2=Math.cos(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   
