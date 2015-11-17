@@ -2,10 +2,16 @@
 .fontWalter{
 font-family: 'Walter Turncoat', cursive;
 }
+.fontShadows{
+font-family: 'Poiret One', cursive;
+}
 
 /* color */
 .colorWhite{
 	color:#ffffff	
+}
+.colorBlack{
+	color:#000000	
 }
 
 /* main */
@@ -34,10 +40,26 @@ a:focus{
     background-image: url(../images/creativePart.jpg);
     position: absolute;
     left: -40%;
-    background-position: contain;
     background-size: cover;
 	z-index:10;
 }
+#leftLoading{
+	width: 100%;
+    height: 100vh;
+    background-image: url(../images/creativePart.jpg);
+    position: absolute;
+    background-size: cover;
+}
+#leftTitle{
+	width: 100%;
+    height: 100vh;
+    background-image: url(../images/creativePart.jpg);
+    position: absolute;
+    background-size: cover;
+	z-index:99;
+	cursor:default;
+}
+
 
 #rightPart{
 	width: 90%;
@@ -329,7 +351,6 @@ float:left;
 }
 
 
-
 .contact{
 	top:55%;
 	left:40%;
@@ -412,8 +433,112 @@ float:left;
 	padding:0 50px;
 }
 
+#leftContent  div{
+	display:none;
+	opacity:0;
+}
+
 #goBack{
 	position:absolute;
 	right:0;	
 	cursor:pointer;
+	display:none;
+}
+
+.leftContentFadeIn{
+	-webkit-animation-name: FadeInEffect; 
+    -webkit-animation-duration: 1.5s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: FadeInEffect;
+    animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes FadeInEffect{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes FadeInEffect{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@keyframes FadeOutEffect{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+@-webkit-keyframes FadeOutEffect{
+	0%{opacity:1;}
+	100%{opacity:0;}
+}
+
+#leftLoading{
+z-index:-99;
+opacity:0;	
+}
+
+.leftLoadingFadeIn{
+	-webkit-animation-name: leftLoadingFadeEffect; 
+    -webkit-animation-duration: 3s; 
+	-webkit-animation-fill-mode: forwards;
+    animation-name: leftLoadingFadeEffect;
+    animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+@keyframes leftLoadingFadeEffect{
+	0%{opacity:0;z-index:-99}
+	1%{opacity:0;z-index:99}
+	20%{opacity:1;z-index:99}
+	70%{opacity:1;z-index:99}
+	100%{opacity:0;z-index:-99}
+}
+@-webkit-keyframes leftLoadingFadeEffect{
+	0%{opacity:0;z-index:-99}
+	1%{opacity:0;z-index:99}
+	20%{opacity:1;z-index:99}
+	70%{opacity:1;z-index:99}
+	100%{opacity:0;z-index:-99}
+}
+
+
+#leftTitle p{
+	right:5%;
+	top:10%;
+	font-size:6vw;
+	position:absolute;	
+}
+
+#rightTitle p{
+	left:5%;
+	top:10%;
+	font-size:6vw;
+	position:absolute;	
+}
+
+/*butterfly*/
+.butterfly {
+  	position:relative;
+	margin-top:10%;
+	width:11%;
+	transform:rotate(20deg);
+	margin-left:25%;
+}
+.butterfly > div {position:absolute;}
+.butterfly img {width:100%;}
+		
+.leftwing {
+  animation:flap-l 4s cubic-bezier(.08,1.47,.65,-0.68) infinite;
+}
+.rightwing {
+  animation:flap-r 4s cubic-bezier(.08,1.47,.65,-0.68) infinite;
+}
+.leftwing, .rightwing {z-index:1;}
+
+@keyframes flap-l {
+			0% {transform:rotateY(0);}
+			50% {transform:rotateY(80deg);}
+			100% {transform:rotateY(0);}
+}
+@keyframes flap-r {
+			0% {transform:rotateY(0); }
+			50% {transform:rotateY(-80deg);}
+			100% {transform:rotateY(0);}
 }
