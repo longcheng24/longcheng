@@ -1,6 +1,14 @@
 // JavaScript Document
 $(document).ready(function(){
 	
+	/*set education content height*/
+	var eHeight = $(window).height()-$("#leftMask a").height();
+	$("#educationContent").css("height",eHeight);
+	$(window).resize(function(e) {
+        var eHeight = $(window).height()-$("#leftMask a").height();
+		$("#educationContent").css("height",eHeight);
+    });
+	
 	/* homepage two parts move */
 	function leftPartClick(){
 		$("#leftPart").off("click");
@@ -44,7 +52,7 @@ $(document).ready(function(){
 	
 	/*Set #leftContent top*/
 	var navheight = $("#leftMask a").height();
-	$("#leftContent").css("top",navheight);
+	$("#leftContent > div").css("padding-top",navheight);
 	
 	/* left part menus animation */
 	//Remove poitner and show content
@@ -136,8 +144,8 @@ $(document).ready(function(){
 			$("#about").css("left","34%");
 			$("#leftMask a").removeClass("sibilngsMove");
 			$("#leftMask a").css("cursor","pointer");	
-			$("#leftContent div").removeClass("leftContentFadeIn");
-			$("#leftContent div").css("display","none");
+			$("#leftContent > div").removeClass("leftContentFadeIn");
+			$("#leftContent > div").css("display","none");
 		},1000)
 		$(this).css("display","none")
 		$("#leftLoading").addClass("leftLoadingFadeIn");
