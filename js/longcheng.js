@@ -146,6 +146,7 @@ $(document).ready(function(){
 			$("#leftMask a").css("cursor","pointer");	
 			$("#leftContent > div").removeClass("leftContentFadeIn");
 			$("#leftContent > div").css("display","none");
+			clearChalk();
 		},1000)
 		$(this).css("display","none")
 		$("#leftLoading").addClass("leftLoadingFadeIn");
@@ -236,3 +237,100 @@ function render() {
 	
 	
 })
+
+
+//chalkboard
+$(document).ready(chalkboard);
+
+function chalkboard(){
+	var canvas = document.getElementById("chalkboard");
+	var ecHeight = $(window).height();
+	var ecWidth = $("#leftContent").width();
+	$('#chalkboard').css('width',ecWidth);
+	$('#chalkboard').css('height',ecHeight);
+	canvas.width = ecWidth;
+	canvas.height = ecHeight;
+	
+	var ctx = canvas.getContext("2d");
+	
+	var width = canvas.width;
+	var height = canvas.height;
+	var mouseX = 0;
+	var mouseY = 0;
+	var mouseD = false;
+	var eraser = false;
+	var xLast = 0;
+	var yLast = 0;
+	var brushDiameter = 7;
+	var eraserWidth = 50;
+	var eraserHeight = 100;
+	
+	document.onselectstart = function(){ return false; };
+	ctx.fillStyle = 'rgba(82,101,246,0.5)';	
+	ctx.strokeStyle = 'rgba(82,101,246,0.5)';	
+    ctx.lineWidth = brushDiameter;
+	ctx.lineCap = 'round';
+
+  
+	
+	$(document).mousemove(function(evt){
+		if($("#educationContent").css("display") != "none"){
+		mouseX = evt.pageX;
+		mouseY = evt.pageY;
+		if(mouseY<height && mouseX<width){
+			$('.chalk').css('left',(mouseX-0.5*brushDiameter)+'px');
+			$('.chalk').css('top',(mouseY-0.5*brushDiameter)+'px');
+			if(mouseD){
+				if(eraser){
+					erase(mouseX,mouseY);
+				}else{
+					draw(mouseX,mouseY);
+					}
+				}
+		}else{
+			$('.chalk').css('top',height-10);
+			}
+		mouseD = true;
+		xLast = mouseX;
+		yLast = mouseY;
+		}});
+
+         
+	function draw(x,y){
+		ctx.strokeStyle = 'rgba(82,101,246,'+(0.4+Math.random()*0.2)+')';
+		ctx.beginPath();
+  		ctx.moveTo(xLast, yLast);		
+  		ctx.lineTo(x, y);
+  		ctx.stroke();
+          
+  		// Chalk Effect
+		var length = Math.round(Math.sqrt(Math.pow(x-xLast,2)+Math.pow(y-yLast,2))/(5/brushDiameter));
+		var xUnit = (x-xLast)/length;
+		var yUnit = (y-yLast)/length;
+		for(var i=0; i<length; i++ ){
+			var xCurrent = xLast+(i*xUnit);	
+			var yCurrent = yLast+(i*yUnit);
+			var xRandom = xCurrent+(Math.random()-0.5)*brushDiameter*1.2;			
+			var yRandom = yCurrent+(Math.random()-0.5)*brushDiameter*1.2;
+    		ctx.clearRect( xRandom, yRandom, Math.random()*2+2, Math.random()+1);
+			}
+
+		xLast = x;
+		yLast = y;
+	}
+
+
+	$(window).resize(function(){
+		 chalkboard();
+	});
+
+} 
+
+function clearChalk(){
+	var canvas = document.getElementById("chalkboard");
+	var ctx = canvas.getContext("2d");
+	var ecHeight = $(window).height();
+	var ecWidth = $("#leftContent").width();
+	ctx.clearRect(0, 0, ecWidth, ecHeight);
+	
+}

@@ -74,6 +74,27 @@ a:focus{
 	z-index:10
 }
 
+@font-face{font-family:'Glyphicons Halflings';src:url(../fonts/glyphicons-halflings-regular.eot);src:url(../fonts/glyphicons-halflings-regular.eot?#iefix) format('embedded-opentype'),url(../fonts/glyphicons-halflings-regular.woff2) format('woff2'),url(../fonts/glyphicons-halflings-regular.woff) format('woff'),url(../fonts/glyphicons-halflings-regular.ttf) format('truetype'),url(../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format('svg')}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-remove:before {
+    content: "\e014";
+}
+.glyphicon-education:before {
+    content: "\e233";
+}
+
 .col-cl-1{
 width:8.33333333%;
 float:left;
@@ -120,7 +141,7 @@ float:left;
 }
 
 .col-cl-10{
-width: 83.33333333%
+width: 83.33333333%;
 float:left;
 }
 
@@ -586,28 +607,51 @@ background-size:cover;
 }
 
 #educationContent div{
-width:75%;
+width:80%;
 clear:both;	
 }
-
-#educationContent div:nth-child(1){
-margin-left:5%;
-margin-top:5%;
-font-size:1.5vw;
+#educationContent div:nth-child(2) img{
+width:13%
 }
-#educationContent div:nth-child(1) img{
+#educationContent div:nth-child(3) img{
 width:15%
 }
 #educationContent div:nth-child(2){
+margin-left:5%;
+font-size:1.6vw;
 margin-top:5%;
-margin-left:25%;
-font-size:1.7vw;
-}
-#educationContent div:nth-child(2) img{
-width:20%
 }
 #educationContent div:nth-child(3){
-	margin-top:5%;
-margin-left:15%;
-font-size:1.6vw;
+margin-left:23%;
+font-size:1.8vw;
+margin-top:23%;
 }
+#educationContent div:nth-child(4){
+	margin-top:43%;
+margin-left:15%;
+font-size:1.7vw;
+}
+
+#goBack span{
+border: 5px #fff solid;
+    border-radius: 50%;
+    font-size: 21px;
+    padding: 3px;	
+	animation: blinker 2.5s linear infinite; 
+	-webkit-animation: blinker 2.5s linear infinite; 
+}
+@keyframes blinker{
+	0%{opacity:0;transform:rotate(0deg);color:#fff;border-color:#fff}
+	25%{color:rgb(238,111,217);border-color:rgb(238,111,217)}
+	50% { opacity: 1.0;}
+	75%{color:rgb(40,186,54);border-color:rgb(40,186,54)}
+	100%{opacity:0;transform:rotate(360deg);}
+}
+@-webkit-keyframes blinker {  
+  	0%{opacity:0;transform:rotate(0deg);color:#fff;border-color:#fff}
+	25%{color:rgb(238,130,15);border-color:color:rgb(238,130,15)}
+	50% { opacity: 1.0;}
+	75%{color:rgb(40,186,54);border-color:rgb(40,186,54)}
+	100%{opacity:0;transform:rotate(360deg);}
+}
+ 
