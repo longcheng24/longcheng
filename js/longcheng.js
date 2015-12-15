@@ -152,7 +152,7 @@ $(document).ready(function(){
 		$("#leftLoading").addClass("leftLoadingFadeIn");
 		setTimeout(function(){
 			$("#leftLoading").removeClass("leftLoadingFadeIn");
-		},3100)		
+		},4000)		
 	})
 	
 	/*left side canvas*/
