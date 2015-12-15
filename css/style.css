@@ -532,9 +532,11 @@ float:left;
 z-index:-999;
 opacity:0;	
 position:absolute;
+display:none;
 }
 
 .leftLoadingFadeIn{
+	display:block !important;
 	-webkit-animation-name: leftLoadingFadeEffect; 
     -webkit-animation-duration: 3s; 
 	-webkit-animation-fill-mode: forwards;
