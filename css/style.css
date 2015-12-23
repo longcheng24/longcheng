@@ -774,6 +774,123 @@ body {
 }
 
 
+@keyframes content1 {
+
+	0%{opacity:1;z-index:10}
+	20%{opacity:1;z-index:10}
+	20.1%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@-webkit-keyframes content1 {
+
+	0%{opacity:1;z-index:10}
+	20%{opacity:1;z-index:10}
+	20.1%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@keyframes content2 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	20.1%{opacity:1;z-index:10}
+	40%{opacity:1;z-index:10}
+	40.1%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@-webkit-keyframes content2 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	20.1%{opacity:1;z-index:10}
+	40%{opacity:1;z-index:10}
+	40.1%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@keyframes content3 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	40.1%{opacity:1;z-index:10}
+	60%{opacity:1;z-index:10}
+	60.1%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@-webkit-keyframes content3 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	40.1%{opacity:1;z-index:10}
+	60%{opacity:1;z-index:10}
+	60.1%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@keyframes content4 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	60.1%{opacity:1;z-index:10}
+	80%{opacity:1;z-index:10}
+	80.1%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@-webkit-keyframes content4 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	60.1%{opacity:1;z-index:10}
+	80%{opacity:1;z-index:10}
+	80.1%{opacity:0;z-index:0}
+	100%{opacity:0;z-index:0}
+	
+}
+@keyframes content5 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	80.1%{opacity:1;z-index:10}
+	100%{opacity:1;z-index:10}
+	
+}
+@-webkit-keyframes content5 {
+
+	0%{opacity:0;z-index:0}
+	20%{opacity:0;z-index:0}
+	40%{opacity:0;z-index:0}
+	60%{opacity:0;z-index:0}
+	80%{opacity:0;z-index:0}
+	80.1%{opacity:1;z-index:10}
+	100%{opacity:1;z-index:10}
+	
+}
+
 .progress-bar1 {
 	border-radius: 60px;
 	overflow: hidden;
@@ -786,27 +903,29 @@ body {
   background:#D4CECE;
 }
 .progress1 {
-  animation: loader1 30s ease infinite;
-  animation-delay:4s;
-  -webkit-animation: loader1 30s ease infinite;
-  -webkit-animation-delay:4s;
   background: #75b800;
   color: #fff;
   padding: 5px;
   width: 0;
 }
+.progress1Animation{
+	animation: loader1 30s ease infinite;
+  animation-delay:4s;
+  -webkit-animation: loader1 30s ease infinite;
+  -webkit-animation-delay:4s;
+}
 .progress-bar1 {
   left: 3%;
   max-width: 15%;
   position: absolute;
-  top: 50%;
+  top: 45%;
   /*transform: translate3d(-50%,-50%,0);**/
 }
 .prgress1content{
 	left: 3%;
 	font-size:0.9vw;
 	position:absolute;
-	top:43%;
+	top:38%;
 }
 .prgress1content span{
 	display:block;
@@ -822,6 +941,54 @@ body {
 	color:#fff;
 	font-style:italic
 }
+.chartStyle{
+width:50%;
+height:200px;
+display:inline-block;
+}
+.chartContent{
+	width:40%;
+	display:inline-block;
+	vertical-align: top;
+	font-family:sans-serif;
+	color:#ffffff;
+	font-size:1.3vw;
+	font-weight: lighter;
+	padding-top:15px;
+}
+.chartcontainer1{
+	width:90%;
+	top: 48%;
+    position: absolute;
+    left: 3%;	
+}
+.chart1Animation{
+	animation: content1 30s ease infinite;
+    animation-delay:4s;
+    -webkit-animation: content1 30s ease infinite;
+    -webkit-animation-delay:4s;
+}
+#c11,#c12,#c13,#c14,#c15,#c16{
+	display:none;
+}
+#c11:target{
+display:inline-block;	
+}
+#c12:target{
+display:inline-block;	
+}
+#c13:target{
+display:inline-block;	
+}
+#c14:target{
+display:inline-block;	
+}
+#c15:target{
+display:inline-block;	
+}
+#c16:target{
+display:inline-block;	
+}
 
 .progress-bar2 {
 	border-radius: 60px;
@@ -835,27 +1002,29 @@ body {
   background:#D4CECE;
 }
 .progress2 {
-  animation: loader2 30s ease infinite;
-  animation-delay:4s;
-  -webkit-animation: loader2 30s ease infinite;
-  -webkit-animation-delay:4s;
   background:#F55D08;
   color: #fff;
   padding: 5px;
   width: 0;
 }
+.progress2Animation{
+animation: loader2 30s ease infinite;
+  animation-delay:4s;
+  -webkit-animation: loader2 30s ease infinite;
+  -webkit-animation-delay:4s;	
+}
 .progress-bar2 {
   left: 21%;
   max-width: 15%;
   position: absolute;
-  top: 45%;
+  top: 40%;
   /*transform: translate3d(-50%,-50%,0);**/
 }
 .prgress2content{
 	left: 21%;
 	font-size:0.9vw;
 	position:absolute;
-	top:38%;
+	top:33%;
 }
 .prgress2content span{
 	display:block;
@@ -871,6 +1040,39 @@ body {
 	color:#fff;
 	font-style:italic
 }
+.chartcontainer2{
+	width:90%;
+	top: 48%;
+    position: absolute;
+    left: 3%;	
+	opacity:0;
+}
+.chart2Animation{
+	animation: content2 30s ease infinite;
+    animation-delay:4s;
+    -webkit-animation: content2 30s ease infinite;
+    -webkit-animation-delay:4s;
+}
+#c21,#c22,#c23,#c24,#c25{
+	display:none;
+}
+#c21:target{
+display:inline-block;	
+}
+#c22:target{
+display:inline-block;	
+}
+#c23:target{
+display:inline-block;	
+}
+#c24:target{
+display:inline-block;	
+}
+#c25:target{
+display:inline-block;	
+}
+
+
 
 .progress-bar3 {
 	border-radius: 60px;
@@ -884,27 +1086,30 @@ body {
   background:#D4CECE;
 }
 .progress3 {
-  animation: loader3 30s ease infinite;
-  animation-delay:4s;
-  -webkit-animation: loader3 30s ease infinite;
-  -webkit-animation-delay:4s;
+  
   background:#D75EF6;
   color: #fff;
   padding: 5px;
   width: 0;
 }
+.progress3Animation{
+	animation: loader3 30s ease infinite;
+  animation-delay:4s;
+  -webkit-animation: loader3 30s ease infinite;
+  -webkit-animation-delay:4s;
+}
 .progress-bar3 {
   left: 39%;
   max-width: 15%;
   position: absolute;
-  top: 40%;
+  top: 35%;
   /*transform: translate3d(-50%,-50%,0);**/
 }
 .prgress3content{
 	left: 39%;
 	font-size:0.9vw;
 	position:absolute;
-	top:33%;
+	top:28%;
 }
 .prgress3content span{
 	display:block;
@@ -920,6 +1125,38 @@ body {
 	color:#fff;
 	font-style:italic
 }
+.chartcontainer3{
+	width:90%;
+	top: 48%;
+    position: absolute;
+    left: 3%;	
+	opacity:0;
+}
+.chart3Animation{
+	animation: content3 30s ease infinite;
+    animation-delay:4s;
+    -webkit-animation: content3 30s ease infinite;
+    -webkit-animation-delay:4s;
+}
+#c31,#c32,#c33,#c34,#c35{
+	display:none;
+}
+#c31:target{
+display:inline-block;	
+}
+#c32:target{
+display:inline-block;	
+}
+#c33:target{
+display:inline-block;	
+}
+#c34:target{
+display:inline-block;	
+}
+#c35:target{
+display:inline-block;	
+}
+
 
 
 .progress-bar4 {
@@ -934,27 +1171,30 @@ body {
   background:#D4CECE;
 }
 .progress4 {
-  animation: loader4 30s ease infinite;
-  animation-delay:4s;
-  -webkit-animation: loader4 30s ease infinite;
-  -webkit-animation-delay:4s;
+
   background:#18BFE2;
   color: #fff;
   padding: 5px;
   width: 0;
 }
+.progress4Animation{
+  animation: loader4 30s ease infinite;
+  animation-delay:4s;
+  -webkit-animation: loader4 30s ease infinite;
+  -webkit-animation-delay:4s;	
+}
 .progress-bar4 {
   left: 57%;
   max-width: 15%;
   position: absolute;
-  top: 35%;
+  top: 30%;
   /*transform: translate3d(-50%,-50%,0);**/
 }
 .prgress4content{
 	left: 57%;
 	font-size:0.9vw;
 	position:absolute;
-	top:28%;
+	top:23%;
 }
 .prgress4content span{
 	display:block;
@@ -970,6 +1210,39 @@ body {
 	color:#fff;
 	font-style:italic
 }
+.chartcontainer4{
+	width:90%;
+	top: 48%;
+    position: absolute;
+    left: 3%;	
+	opacity:0;
+}
+.chart4Animation{
+	animation: content4 30s ease infinite;
+    animation-delay:4s;
+    -webkit-animation: content4 30s ease infinite;
+    -webkit-animation-delay:4s;
+}
+#c41,#c42,#c43,#c44,#c45{
+	display:none;
+}
+#c41:target{
+display:inline-block;	
+}
+#c42:target{
+display:inline-block;	
+}
+#c43:target{
+display:inline-block;	
+}
+#c44:target{
+display:inline-block;	
+}
+#c45:target{
+display:inline-block;	
+}
+
+
 
 .progress-bar5 {
 	border-radius: 60px;
@@ -983,27 +1256,30 @@ body {
   background:#D4CECE;
 }
 .progress5{
-  animation: loader5 30s ease infinite;
-  animation-delay:4s;
-  -webkit-animation: loader5 30s ease infinite;
-  -webkit-animation-delay:4s;
+ 
   background:#E5E745;
   color: #fff;
   padding: 5px;
   width: 0;
 }
+.progress5Animation{
+ animation: loader5 30s ease infinite;
+  animation-delay:4s;
+  -webkit-animation: loader5 30s ease infinite;
+  -webkit-animation-delay:4s;	
+}
 .progress-bar5 {
   left: 75%;
   max-width: 15%;
   position: absolute;
-  top: 30%;
+  top: 25%;
   /*transform: translate3d(-50%,-50%,0);**/
 }
 .prgress5content{
 	left: 75%;
 	font-size:0.9vw;
 	position:absolute;
-	top:23%;
+	top:18%;
 }
 .prgress5content span{
 	display:block;
@@ -1019,3 +1295,35 @@ body {
 	color:#fff;
 	font-style:italic
 }
+.chartcontainer5{
+	width:90%;
+	top: 48%;
+    position: absolute;
+    left: 3%;	
+	opacity:0;
+}
+.chart5Animation{
+	animation: content5 30s ease infinite;
+    animation-delay:s;
+    -webkit-animation: content5 30s ease infinite;
+    -webkit-animation-delay:4s;
+}
+#c51,#c52,#c53,#c54,#c55{
+	display:none;
+}
+#c51:target{
+display:inline-block;	
+}
+#c52:target{
+display:inline-block;	
+}
+#c53:target{
+display:inline-block;	
+}
+#c54:target{
+display:inline-block;	
+}
+#c55:target{
+display:inline-block;	
+}
+

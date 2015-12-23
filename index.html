@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Long Cheng">
 
     <title>Long Cheng - Full Stack Web Developer</title>
 
@@ -65,55 +65,152 @@
             <div class="clear"></div>        	
         </div>
         <div id="careerContent" style="color:red">
-        	<div class="prgress1content">
+        	<div class="prgress1content" onMouseOver="removeProAnimation()" onMouseOut="addProAnimation()">
             	<span>2010 - Present</span>
                 <span>Freelancer</span>
                 <span>Full stack web developer</span>
             </div>
         	<div class="progress-bar1">
               <span class="bar1">
-                <span class="progress1"></span>
+                <span class="progress1 progress1Animation"></span>
               </span>
             </div>
-            <div class="prgress2content">
+            <div class="chartcontainer1 chart1Animation" style="background:rgba(117,184,0,0.4);" >
+            	<div id="chartdiv1" class="chartStyle"></div>
+                <div id="c11" class="chartContent">
+                	c11
+                </div>
+                <div id="c12" class="chartContent">
+                	c12
+                </div>
+                <div id="c13" class="chartContent">
+                	c13
+                </div>
+                <div id="c14" class="chartContent">
+                	c14
+                </div>
+                <div id="c15" class="chartContent">
+                	c15
+                </div>
+                <div id="c16" class="chartContent">
+                	c16
+                </div>
+            </div>
+            
+            <div class="prgress2content" onMouseOver="removeProAnimation()" onMouseOut="addProAnimation()">
             	<span>2012 - 2013</span>
                 <span>Reflex Group</span>
                 <span>Web developer</span>
             </div>
             <div class="progress-bar2">
               <span class="bar2">
-                <span class="progress2"></span>
+                <span class="progress2 progress2Animation"></span>
               </span>
             </div>
-            <div class="prgress3content">
+            <div class="chartcontainer2 chart2Animation" style="background:rgba(245,93,8,0.4);" >
+            	<div id="chartdiv2" class="chartStyle"></div>
+                <div id="c21" class="chartContent">
+                	c21
+                </div>
+                <div id="c22" class="chartContent">
+                	c22
+                </div>
+                <div id="c23" class="chartContent">
+                	c23
+                </div>
+                <div id="c24" class="chartContent">
+                	c24
+                </div>
+                <div id="c25" class="chartContent">
+                	c25
+                </div>
+            </div>
+            
+            <div class="prgress3content" onMouseOver="removeProAnimation()" onMouseOut="addProAnimation()">
             	<span>2013 - 2014</span>
                 <span>Fresh Design Studio</span>
                 <span>Application developer</span>
             </div>
             <div class="progress-bar3">
               <span class="bar3">
-                <span class="progress3"></span>
+                <span class="progress3 progress3Animation"></span>
               </span>
             </div>
-            <div class="prgress4content">
+            <div class="chartcontainer3 chart3Animation" style="background:rgba(215,94,246,0.4);" >
+            	<div id="chartdiv3" class="chartStyle"></div>
+                <div id="c31" class="chartContent">
+                	c31
+                </div>
+                <div id="c32" class="chartContent">
+                	c32
+                </div>
+                <div id="c33" class="chartContent">
+                	c33
+                </div>
+                <div id="c34" class="chartContent">
+                	c34
+                </div>
+                <div id="c35" class="chartContent">
+                	c35
+                </div>
+            </div>
+            
+            <div class="prgress4content" onMouseOver="removeProAnimation()" onMouseOut="addProAnimation()">
             	<span>2014 - 2015</span>
                 <span>Best Food Services, Inc.</span>
                 <span>Application developer</span>
             </div>
             <div class="progress-bar4">
               <span class="bar4">
-                <span class="progress4"></span>
+                <span class="progress4 progress4Animation"></span>
               </span>
             </div>
-            <div class="prgress5content">
+            <div class="chartcontainer4 chart4Animation" style="background:rgba(24,191,226,0.4);" >
+            	<div id="chartdiv4" class="chartStyle"></div>
+                <div id="c41" class="chartContent">
+                	c41
+                </div>
+                <div id="c42" class="chartContent">
+                	c42
+                </div>
+                <div id="c43" class="chartContent">
+                	c43
+                </div>
+                <div id="c44" class="chartContent">
+                	c44
+                </div>
+                <div id="c45" class="chartContent">
+                	c45
+                </div>
+            </div>
+            
+            <div class="prgress5content" onMouseOver="removeProAnimation()" onMouseOut="addProAnimation()">
             	<span>2015 - Present</span>
                 <span>Brickfish</span>
                 <span>Web developer</span>
             </div>
             <div class="progress-bar5">
               <span class="bar5">
-                <span class="progress5"></span>
+                <span class="progress5 progress5Animation"></span>
               </span>
+            </div>
+            <div class="chartcontainer5 chart5Animation" style="background:rgba(229,231,69,0.4);" >
+            	<div id="chartdiv5" class="chartStyle"></div>
+                <div id="c51" class="chartContent">
+                	c51
+                </div>
+                <div id="c52" class="chartContent">
+                	c52
+                </div>
+                <div id="c53" class="chartContent">
+                	c53
+                </div>
+                <div id="c54" class="chartContent">
+                	c54
+                </div>
+                <div id="c55" class="chartContent">
+                	c55
+                </div>
             </div>
         </div>
         <div id="designContent" style="color:blue">
@@ -149,12 +246,16 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script src="js/longcheng.js"></script>
+    
+    
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
+    <script src="js/amcharts.js"></script>
+    <script src="js/pie.js"></script>
+    <script src="js/longcheng.js"></script>
 </body>
 
 </html>

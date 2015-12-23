@@ -334,3 +334,228 @@ function clearChalk(){
 	ctx.clearRect(0, 0, ecWidth, ecHeight);
 	
 }
+
+
+AmCharts.makeChart("chartdiv1", {
+                "type": "pie",
+                "dataProvider": [{
+                    "skills": "PHP/Wordpress",
+                        "litres": 30,
+						"url":"#c11"
+                }, {
+                    "skills": "Html/CSS",
+                        "litres": 25,
+						"url":"#c12"
+                }, {
+                    "skills": "Javascript/JQuery",
+                        "litres": 20,
+						"url":"#c13"
+                }, {
+                    "skills": "Python",
+                        "litres": 10,
+						"url":"#c14"
+                }, {
+                    "skills": "Graphic",
+                        "litres": 10,
+						"url":"#c15"
+                }, {
+                    "skills": "Other",
+                        "litres": 5,
+						"url":"#c16"
+                }],
+                "titleField": "skills",
+                "valueField": "litres",
+				"color":"#ffffff",
+				"labelTickColor":"#ffffff",
+				"depth3D":10,
+				"angle":30,
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
+				"urlField":"url"
+            });
+
+AmCharts.makeChart("chartdiv2", {
+                "type": "pie",
+                "dataProvider": [{
+                    "skills": "Html/CSS",
+                        "litres": 40,
+						"url":"#c21"
+                }, {
+                    "skills": "Graphic",
+                        "litres": 20,
+						"url":"#c22"
+                }, {
+                    "skills": "Javascript/JQuery",
+                        "litres": 20,
+						"url":"#c23"
+                }, {
+                    "skills": "PHP/Joomla",
+                        "litres": 15,
+						"url":"#c24"
+                }, {
+                    "skills": "Mobile",
+                        "litres": 5,
+						"url":"#c25"
+                }],
+                "titleField": "skills",
+                "valueField": "litres",
+				"color":"#ffffff",
+				"labelTickColor":"#ffffff",
+				"depth3D":10,
+				"angle":30,
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
+				"urlField":"url"
+            });	
+			
+AmCharts.makeChart("chartdiv3", {
+                "type": "pie",
+                "dataProvider": [{
+                    "skills": "Html/CSS",
+                        "litres": 40,
+						"url":"#c31"
+                }, {
+                    "skills": "Wordpress/Drupal",
+                        "litres": 30,
+						"url":"#c32"
+                }, {
+                    "skills": "Digital Marketing",
+                        "litres": 25,
+						"url":"#c33"
+                }, {
+                    "skills": "Graphic",
+                        "litres": 10,
+						"url":"#c34"
+                }, {
+                    "skills": "Technology Research",
+                        "litres": 5,
+						"url":"#c35"
+                }],
+                "titleField": "skills",
+                "valueField": "litres",
+				"color":"#ffffff",
+				"labelTickColor":"#ffffff",
+				"depth3D":10,
+				"angle":30,
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
+				"urlField":"url"
+            });	
+			
+AmCharts.makeChart("chartdiv4", {
+                "type": "pie",
+                "dataProvider": [{
+                    "skills": "ASP.NET",
+                        "litres": 50,
+						"url":"#c41"
+                }, {
+                    "skills": "Html/CSS",
+                        "litres": 30,
+						"url":"#c42"
+                }, {
+                    "skills": "Graphic",
+                        "litres": 10,
+						"url":"#c43"
+                }, {
+                    "skills": "PHP/Wordpress",
+                        "litres": 5,
+						"url":"#c44"
+                }, {
+                    "skills": "Microsoft Exchange",
+                        "litres": 5,
+						"url":"#c45"
+                }],
+                "titleField": "skills",
+                "valueField": "litres",
+				"color":"#ffffff",
+				"labelTickColor":"#ffffff",
+				"depth3D":10,
+				"angle":30,
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
+				"urlField":"url"
+            });	
+			
+AmCharts.makeChart("chartdiv5", {
+                "type": "pie",
+                "dataProvider": [{
+                    "skills": "PHP",
+                        "litres": 40,
+						"url":"#c51"
+                }, {
+                    "skills": "Html/CSS",
+                        "litres": 30,
+						"url":"#c52"
+                }, {
+                    "skills": "Javascript/JQuery",
+                        "litres": 20,
+						"url":"#c53"
+                }, {
+                    "skills": "Graphic",
+                        "litres": 5,
+						"url":"#c54"
+                }, {
+                    "skills": "Other",
+                        "litres": 5,
+						"url":"#c55"
+                }],
+                "titleField": "skills",
+                "valueField": "litres",
+				"color":"#ffffff",
+				"labelTickColor":"#ffffff",
+				"depth3D":10,
+				"angle":30,
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
+				"urlField":"url"
+            });						
+			
+function removeProAnimation(){
+	$(".progress1Animation").css("-webkit-animation-play-state","paused");
+	$(".progress1Animation").css("animation-play-state","paused");
+	$(".chart1Animation").css("-webkit-animation-play-state","paused");
+	$(".chart1Animation").css("animation-play-state","paused");
+	
+	$(".progress2Animation").css("-webkit-animation-play-state","paused");
+	$(".progress2Animation").css("animation-play-state","paused");
+	$(".chart2Animation").css("-webkit-animation-play-state","paused");
+	$(".chart2Animation").css("animation-play-state","paused");
+	
+	$(".progress3Animation").css("-webkit-animation-play-state","paused");
+	$(".progress3Animation").css("animation-play-state","paused");
+	$(".chart3Animation").css("-webkit-animation-play-state","paused");
+	$(".chart3Animation").css("animation-play-state","paused");
+	
+	$(".progress4Animation").css("-webkit-animation-play-state","paused");
+	$(".progress4Animation").css("animation-play-state","paused");
+	$(".chart4Animation").css("-webkit-animation-play-state","paused");
+	$(".chart4Animation").css("animation-play-state","paused");
+	
+	$(".progress5Animation").css("-webkit-animation-play-state","paused");
+	$(".progress5Animation").css("animation-play-state","paused");
+	$(".chart5Animation").css("-webkit-animation-play-state","paused");
+	$(".chart5Animation").css("animation-play-state","paused");
+}
+
+function addProAnimation(){
+	$(".progress1Animation").css("-webkit-animation-play-state","running");
+	$(".progress1Animation").css("animation-play-state","running");
+	$(".chart1Animation").css("-webkit-animation-play-state","running");
+	$(".chart1Animation").css("animation-play-state","running");
+	
+	$(".progress2Animation").css("-webkit-animation-play-state","running");
+	$(".progress2Animation").css("animation-play-state","running");
+	$(".chart2Animation").css("-webkit-animation-play-state","running");
+	$(".chart2Animation").css("animation-play-state","running");
+	
+	$(".progress3Animation").css("-webkit-animation-play-state","running");
+	$(".progress3Animation").css("animation-play-state","running");
+	$(".chart3Animation").css("-webkit-animation-play-state","running");
+	$(".chart3Animation").css("animation-play-state","running");
+	
+	$(".progress4Animation").css("-webkit-animation-play-state","running");
+	$(".progress4Animation").css("animation-play-state","running");
+	$(".chart4Animation").css("-webkit-animation-play-state","running");
+	$(".chart4Animation").css("animation-play-state","running");
+	
+	$(".progress5Animation").css("-webkit-animation-play-state","running");
+	$(".progress5Animation").css("animation-play-state","running");
+	$(".chart5Animation").css("-webkit-animation-play-state","running");
+	$(".chart5Animation").css("animation-play-state","running");
+}
+
