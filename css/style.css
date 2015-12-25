@@ -942,23 +942,14 @@ body {
 	font-style:italic
 }
 .chartStyle{
-width:50%;
+width:100%;
 height:200px;
 display:inline-block;
 }
-.chartContent{
-	width:40%;
-	display:inline-block;
-	vertical-align: top;
-	font-family:sans-serif;
-	color:#ffffff;
-	font-size:1.3vw;
-	font-weight: lighter;
-	padding-top:15px;
-}
+
 .chartcontainer1{
 	width:90%;
-	top: 48%;
+	top: 50%;
     position: absolute;
     left: 3%;	
 }
@@ -967,27 +958,6 @@ display:inline-block;
     animation-delay:4s;
     -webkit-animation: content1 30s ease infinite;
     -webkit-animation-delay:4s;
-}
-#c11,#c12,#c13,#c14,#c15,#c16{
-	display:none;
-}
-#c11:target{
-display:inline-block;	
-}
-#c12:target{
-display:inline-block;	
-}
-#c13:target{
-display:inline-block;	
-}
-#c14:target{
-display:inline-block;	
-}
-#c15:target{
-display:inline-block;	
-}
-#c16:target{
-display:inline-block;	
 }
 
 .progress-bar2 {
@@ -1042,7 +1012,7 @@ animation: loader2 30s ease infinite;
 }
 .chartcontainer2{
 	width:90%;
-	top: 48%;
+	top: 50%;
     position: absolute;
     left: 3%;	
 	opacity:0;
@@ -1053,26 +1023,6 @@ animation: loader2 30s ease infinite;
     -webkit-animation: content2 30s ease infinite;
     -webkit-animation-delay:4s;
 }
-#c21,#c22,#c23,#c24,#c25{
-	display:none;
-}
-#c21:target{
-display:inline-block;	
-}
-#c22:target{
-display:inline-block;	
-}
-#c23:target{
-display:inline-block;	
-}
-#c24:target{
-display:inline-block;	
-}
-#c25:target{
-display:inline-block;	
-}
-
-
 
 .progress-bar3 {
 	border-radius: 60px;
@@ -1127,7 +1077,7 @@ display:inline-block;
 }
 .chartcontainer3{
 	width:90%;
-	top: 48%;
+	top: 50%;
     position: absolute;
     left: 3%;	
 	opacity:0;
@@ -1137,24 +1087,6 @@ display:inline-block;
     animation-delay:4s;
     -webkit-animation: content3 30s ease infinite;
     -webkit-animation-delay:4s;
-}
-#c31,#c32,#c33,#c34,#c35{
-	display:none;
-}
-#c31:target{
-display:inline-block;	
-}
-#c32:target{
-display:inline-block;	
-}
-#c33:target{
-display:inline-block;	
-}
-#c34:target{
-display:inline-block;	
-}
-#c35:target{
-display:inline-block;	
 }
 
 
@@ -1212,7 +1144,7 @@ display:inline-block;
 }
 .chartcontainer4{
 	width:90%;
-	top: 48%;
+	top: 50%;
     position: absolute;
     left: 3%;	
 	opacity:0;
@@ -1223,25 +1155,6 @@ display:inline-block;
     -webkit-animation: content4 30s ease infinite;
     -webkit-animation-delay:4s;
 }
-#c41,#c42,#c43,#c44,#c45{
-	display:none;
-}
-#c41:target{
-display:inline-block;	
-}
-#c42:target{
-display:inline-block;	
-}
-#c43:target{
-display:inline-block;	
-}
-#c44:target{
-display:inline-block;	
-}
-#c45:target{
-display:inline-block;	
-}
-
 
 
 .progress-bar5 {
@@ -1297,7 +1210,7 @@ display:inline-block;
 }
 .chartcontainer5{
 	width:90%;
-	top: 48%;
+	top: 50%;
     position: absolute;
     left: 3%;	
 	opacity:0;
@@ -1307,23 +1220,5 @@ display:inline-block;
     animation-delay:s;
     -webkit-animation: content5 30s ease infinite;
     -webkit-animation-delay:4s;
-}
-#c51,#c52,#c53,#c54,#c55{
-	display:none;
-}
-#c51:target{
-display:inline-block;	
-}
-#c52:target{
-display:inline-block;	
-}
-#c53:target{
-display:inline-block;	
-}
-#c54:target{
-display:inline-block;	
-}
-#c55:target{
-display:inline-block;	
 }
 

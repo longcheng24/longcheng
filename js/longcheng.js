@@ -340,28 +340,22 @@ AmCharts.makeChart("chartdiv1", {
                 "type": "pie",
                 "dataProvider": [{
                     "skills": "PHP/Wordpress",
-                        "litres": 30,
-						"url":"#c11"
+                        "litres": 30
                 }, {
                     "skills": "Html/CSS",
-                        "litres": 25,
-						"url":"#c12"
+                        "litres": 25
                 }, {
                     "skills": "Javascript/JQuery",
-                        "litres": 20,
-						"url":"#c13"
+                        "litres": 20
                 }, {
                     "skills": "Python",
-                        "litres": 10,
-						"url":"#c14"
+                        "litres": 10
                 }, {
-                    "skills": "Graphic",
-                        "litres": 10,
-						"url":"#c15"
+                    "skills": "Creative Design",
+                        "litres": 10
                 }, {
                     "skills": "Other",
-                        "litres": 5,
-						"url":"#c16"
+                        "litres": 5
                 }],
                 "titleField": "skills",
                 "valueField": "litres",
@@ -369,32 +363,26 @@ AmCharts.makeChart("chartdiv1", {
 				"labelTickColor":"#ffffff",
 				"depth3D":10,
 				"angle":30,
-                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
-				"urlField":"url"
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
             });
 
 AmCharts.makeChart("chartdiv2", {
                 "type": "pie",
                 "dataProvider": [{
                     "skills": "Html/CSS",
-                        "litres": 40,
-						"url":"#c21"
+                        "litres": 40
                 }, {
-                    "skills": "Graphic",
-                        "litres": 20,
-						"url":"#c22"
+                    "skills": "Graphic Design",
+                        "litres": 20
                 }, {
                     "skills": "Javascript/JQuery",
-                        "litres": 20,
-						"url":"#c23"
+                        "litres": 20
                 }, {
                     "skills": "PHP/Joomla",
-                        "litres": 15,
-						"url":"#c24"
+                        "litres": 15
                 }, {
-                    "skills": "Mobile",
-                        "litres": 5,
-						"url":"#c25"
+                    "skills": "Mobile APP",
+                        "litres": 5
                 }],
                 "titleField": "skills",
                 "valueField": "litres",
@@ -402,32 +390,26 @@ AmCharts.makeChart("chartdiv2", {
 				"labelTickColor":"#ffffff",
 				"depth3D":10,
 				"angle":30,
-                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
-				"urlField":"url"
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
             });	
 			
 AmCharts.makeChart("chartdiv3", {
                 "type": "pie",
                 "dataProvider": [{
                     "skills": "Html/CSS",
-                        "litres": 40,
-						"url":"#c31"
+                        "litres": 30
                 }, {
                     "skills": "Wordpress/Drupal",
-                        "litres": 30,
-						"url":"#c32"
+                        "litres": 30
                 }, {
                     "skills": "Digital Marketing",
-                        "litres": 25,
-						"url":"#c33"
+                        "litres": 25
                 }, {
-                    "skills": "Graphic",
-                        "litres": 10,
-						"url":"#c34"
+                    "skills": "Creative Design",
+                        "litres": 10
                 }, {
                     "skills": "Technology Research",
-                        "litres": 5,
-						"url":"#c35"
+                        "litres": 5
                 }],
                 "titleField": "skills",
                 "valueField": "litres",
@@ -435,32 +417,26 @@ AmCharts.makeChart("chartdiv3", {
 				"labelTickColor":"#ffffff",
 				"depth3D":10,
 				"angle":30,
-                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
-				"urlField":"url"
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
             });	
 			
 AmCharts.makeChart("chartdiv4", {
                 "type": "pie",
                 "dataProvider": [{
                     "skills": "ASP.NET",
-                        "litres": 50,
-						"url":"#c41"
+                        "litres": 50
                 }, {
                     "skills": "Html/CSS",
-                        "litres": 30,
-						"url":"#c42"
+                        "litres": 30
                 }, {
-                    "skills": "Graphic",
-                        "litres": 10,
-						"url":"#c43"
+                    "skills": "Graphic Design",
+                        "litres": 10
                 }, {
                     "skills": "PHP/Wordpress",
-                        "litres": 5,
-						"url":"#c44"
+                        "litres": 5
                 }, {
-                    "skills": "Microsoft Exchange",
-                        "litres": 5,
-						"url":"#c45"
+                    "skills": "Microsoft Exchange Sever Administrator",
+                        "litres": 5
                 }],
                 "titleField": "skills",
                 "valueField": "litres",
@@ -468,32 +444,26 @@ AmCharts.makeChart("chartdiv4", {
 				"labelTickColor":"#ffffff",
 				"depth3D":10,
 				"angle":30,
-                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
-				"urlField":"url"
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
             });	
 			
 AmCharts.makeChart("chartdiv5", {
                 "type": "pie",
                 "dataProvider": [{
                     "skills": "PHP",
-                        "litres": 40,
-						"url":"#c51"
+                        "litres": 40
                 }, {
                     "skills": "Html/CSS",
-                        "litres": 30,
-						"url":"#c52"
+                        "litres": 30
                 }, {
                     "skills": "Javascript/JQuery",
-                        "litres": 20,
-						"url":"#c53"
+                        "litres": 20
                 }, {
                     "skills": "Graphic",
-                        "litres": 5,
-						"url":"#c54"
+                        "litres": 5
                 }, {
                     "skills": "Other",
-                        "litres": 5,
-						"url":"#c55"
+                        "litres": 5
                 }],
                 "titleField": "skills",
                 "valueField": "litres",
@@ -501,8 +471,7 @@ AmCharts.makeChart("chartdiv5", {
 				"labelTickColor":"#ffffff",
 				"depth3D":10,
 				"angle":30,
-                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>",
-				"urlField":"url"
+                "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
             });						
 			
 function removeProAnimation(){
