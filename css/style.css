@@ -1225,69 +1225,134 @@ animation: loader2 30s ease infinite;
 
 /* about */
 #aboutContent {
-	background: rgba(255,255,255,0.3);
+	background: url(../images/wooden-wall.jpg);
 	height: calc(100vh - 60px);
+	background-size: cover;
 }
 .aboutContent > div{
 	position: absolute;
+	text-align: center;
+	width: 20%;
+	font-family: sans-serif;
+}
+.aboutContent > div p{
+	opacity: 0;
 }
 .aboutGame{
-	left: 10%;
+	left: 5%;
+	top:20%;
 }
 .aboutGame img{
-width: 30%;
+width: 52%;
 -ms-transform: rotate(-7deg); /* IE 9 */
 -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
 transform: rotate(-7deg);
 }
+.aboutGame :hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
+}
 .aboutKobe{
-	left: 68%;
-	top:20%
+	left: 53%;
+	top:30%
 }
 .aboutKobe img{
-width:40%;
+width:50%;
 -ms-transform: rotate(-10deg); /* IE 9 */
 -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
 transform: rotate(-10deg);
 }
+.aboutKobe img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
+}
 .aboutJuven{
-	left: 25%;
-	top:32%
+	left: 28%;
+	top:25%;
+	width: 30%
 }
 .aboutJuven img{
-width:45%;
+width:75%;
 -ms-transform: rotate(12deg); /* IE 9 */
 -webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
 transform: rotate(12deg);
 }
+.aboutJuven img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
+}
 .aboutCountry{
-	left: 47%;
-	top:55%
+	left: 42%;
+	top:64%
 }
 .aboutCountry img{
-width:65%;
+width:50%;
 -ms-transform: rotate(-15deg); /* IE 9 */
 -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
 transform: rotate(-15deg);
 }
+.aboutCountry img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
+}
 .aboutLinks{
 	left: 10%;
-	top:67%
+	top:60%
 }
 .aboutLinks img{
-width:75%;
+width:55%;
+}
+.aboutLinks img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
 }
 .aboutBeer{
-	left: 50%;
-	top: 15%;
+	left: 77%;
+    top: 24%;
 }
 .aboutBeer img{
-width:75%;
+width:60%;
+}
+.aboutBeer img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
 }
 .aboutMovie{
-	bottom: 7%;
-    right: 0;
+	bottom: 0%;
+    right: 10%;
 }
 .aboutMovie img{
-width:55%;
+width:45%;
+}
+.aboutMovie img:hover{
+	left: 10%;
+	-ms-transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+	transform: scale(1.1);
+	transition: 1s;
+	-webkit-transition:1s;
 }

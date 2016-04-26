@@ -1,6 +1,13 @@
 // JavaScript Document
 $(document).ready(function(){
-	
+	$(".aboutContent > div").mouseover(function(){
+		$(this).children("p").css("opacity","1")
+	})
+	$(".aboutContent > div").mouseout(function(){
+		$(this).children("p").css("opacity","0")
+	})
+
+
 	/*set education content height*/
 	var eHeight = $(window).height()-$("#leftMask a").height();
 	$("#educationContent").css("height",eHeight);
@@ -8,7 +15,7 @@ $(document).ready(function(){
         var eHeight = $(window).height()-$("#leftMask a").height();
 		$("#educationContent").css("height",eHeight);
     });
-	
+
 	/* homepage two parts move */
 	function leftPartClick(){
 		$("#leftPart").off("click");
@@ -28,7 +35,7 @@ $(document).ready(function(){
 			$("#rightPart").on("click",rightPartClick)
 		},2100)
 	}
-	
+
 	function rightPartClick(){
 		$("#leftPart").off("click")
 		$("#rightPart").off("click")
@@ -46,18 +53,18 @@ $(document).ready(function(){
 			$("#rightPart").on("click",rightPartClick)
 		},2100)
 	}
-		
+
 	$("#leftPart").on("click",leftPartClick)
 	$("#rightPart").on("click",rightPartClick)
-	
+
 	/*Set #leftContent top*/
 	var navheight = $("#leftMask a").height();
 	$("#leftContent > div").css("padding-top",navheight);
-	
+
 	/* left part menus animation */
 	//Remove poitner and show content
 	$("#leftMask a").click(function(){
-		$(this).css("cursor","default");	
+		$(this).css("cursor","default");
 		$("#goBack").css("display","block");
 		idName = "#" + $(this).attr("id") + "Content";
 		$(idName).css("display","block");
@@ -65,7 +72,7 @@ $(document).ready(function(){
 			$(idName).addClass("leftContentFadeIn");
 		},3300)
 	})
-	
+
 	//menus animation start
 	$("#education").click(function(){
 		$(this).addClass("educationMove");
@@ -76,7 +83,7 @@ $(document).ready(function(){
 			$("#education").css("left",leftPosition);
 		},2800)
 	})
-	
+
 	$("#career").click(function(){
 		$(this).addClass("careerMove");
 		$("#career span:first-child").addClass("carBefore");
@@ -87,7 +94,7 @@ $(document).ready(function(){
 			$("#career").css("left",leftPosition)
 		},2800)
 	})
-	
+
 	$("#design").click(function(){
 		$(this).addClass("designMove");
 		$("#design span:nth-child(2)").addClass("dsgAfter");
@@ -97,7 +104,7 @@ $(document).ready(function(){
 			$("#design").css("left",leftPosition)
 		},2800)
 	})
-	
+
 	$("#contact").click(function(){
 		$(this).addClass("contactMove");
 		$("#contact span:first-child").addClass("ctcBefore");
@@ -108,7 +115,7 @@ $(document).ready(function(){
 			$("#contact").css("left",leftPosition)
 		},2800)
 	})
-	
+
 	$("#about").click(function(){
 		$(this).addClass("aboutMove");
 		$("#about span:nth-child(2)").addClass("aboutAfterMove");
@@ -121,7 +128,7 @@ $(document).ready(function(){
 			$("#about").css("left",leftPosition)
 		},2800)
 	})
-	
+
 	/* Left close button */
 	$("#goBack").click(function(){
 		setTimeout(function(){
@@ -143,7 +150,7 @@ $(document).ready(function(){
 			$("#about span:nth-child(2)").removeClass("aboutAfterMove");
 			$("#about").css("left","34%");
 			$("#leftMask a").removeClass("sibilngsMove");
-			$("#leftMask a").css("cursor","pointer");	
+			$("#leftMask a").css("cursor","pointer");
 			$("#leftContent > div").removeClass("leftContentFadeIn");
 			$("#leftContent > div").css("display","none");
 			clearChalk();
@@ -152,9 +159,9 @@ $(document).ready(function(){
 		$("#leftLoading").addClass("leftLoadingFadeIn");
 		setTimeout(function(){
 			$("#leftLoading").removeClass("leftLoadingFadeIn");
-		},4000)		
+		},4000)
 	})
-	
+
 	/*left side canvas*/
 	CANVAS = { // BOO GLOBALS
   h : null, // height
@@ -167,7 +174,7 @@ var CTX; // shorter name
 window.onload = size;
 window.onresize = size;
 
-window.rAF = (function() { 
+window.rAF = (function() {
 	return  window.requestAnimationFrame ||
 	window.webkitRequestAnimationFrame   ||
 	window.mozRequestAnimationFrame      ||
@@ -179,18 +186,18 @@ window.rAF = (function() {
 function size() {
   window.setTimeout(function() {
     container = document.getElementById('container');
-    
+
     CANVAS.e = document.getElementById('c');
     CANVAS.h = container.offsetHeight;
     CANVAS.w = container.offsetWidth;
     CANVAS.c = CANVAS.e.getContext('2d');
     CTX = CANVAS.c;
-    
+
     CANVAS.e.setAttribute('height', CANVAS.h+'px');
     CANVAS.e.style.height = CANVAS.h.toString()+'px';
     CANVAS.e.setAttribute('width', CANVAS.w+'px');
     CANVAS.e.style.width = CANVAS.w.toString()+'px';
-    
+
     init();
   },0)
 }
@@ -201,7 +208,7 @@ function init() {
   window.xb = null;
   window.yb = null;
 
-  
+
   (function loop(){
     rAF(loop);
     render();
@@ -211,18 +218,18 @@ function init() {
 function render() {
   x1=xb||Math.sin(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   y1=yb||Math.cos(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
-  
+
   t+=0.04;
   x2=Math.sin(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
   y2=Math.cos(t)*( (Math.pow(Math.E, Math.cos(t))) - (2*Math.cos(4*t)) - Math.pow(Math.sin(t/12),5) );
-  
+
   c = "hsla("+(360-(Math.floor((Math.abs(x1)+Math.abs(y1)*60)).toString()))+", 70%, 60%, 1)";
   px1 = CANVAS.w/2+x1*60;
   py1 = CANVAS.h/2+y1*60;
   px2 = CANVAS.w/2+x2*60;
   py2 = CANVAS.h/2+y2*60;
 
-  
+
   CTX.strokeStyle = c;
   CTX.lineWidth = 2;
   CTX.lineCap = 'square';
@@ -234,8 +241,8 @@ function render() {
   xb = x2;
   yb = y2;
 }
-	
-	
+
+
 })
 
 
@@ -250,9 +257,9 @@ function chalkboard(){
 	$('#chalkboard').css('height',ecHeight);
 	canvas.width = ecWidth;
 	canvas.height = ecHeight;
-	
+
 	var ctx = canvas.getContext("2d");
-	
+
 	var width = canvas.width;
 	var height = canvas.height;
 	var mouseX = 0;
@@ -264,15 +271,15 @@ function chalkboard(){
 	var brushDiameter = 7;
 	var eraserWidth = 50;
 	var eraserHeight = 100;
-	
+
 	document.onselectstart = function(){ return false; };
-	ctx.fillStyle = 'rgba(82,101,246,0.5)';	
-	ctx.strokeStyle = 'rgba(82,101,246,0.5)';	
+	ctx.fillStyle = 'rgba(82,101,246,0.5)';
+	ctx.strokeStyle = 'rgba(82,101,246,0.5)';
     ctx.lineWidth = brushDiameter;
 	ctx.lineCap = 'round';
 
-  
-	
+
+
 	$(document).mousemove(function(evt){
 		if($("#educationContent").css("display") != "none"){
 		mouseX = evt.pageX;
@@ -295,22 +302,22 @@ function chalkboard(){
 		yLast = mouseY;
 		}});
 
-         
+
 	function draw(x,y){
 		ctx.strokeStyle = 'rgba(82,101,246,'+(0.4+Math.random()*0.2)+')';
 		ctx.beginPath();
-  		ctx.moveTo(xLast, yLast);		
+  		ctx.moveTo(xLast, yLast);
   		ctx.lineTo(x, y);
   		ctx.stroke();
-          
+
   		// Chalk Effect
 		var length = Math.round(Math.sqrt(Math.pow(x-xLast,2)+Math.pow(y-yLast,2))/(5/brushDiameter));
 		var xUnit = (x-xLast)/length;
 		var yUnit = (y-yLast)/length;
 		for(var i=0; i<length; i++ ){
-			var xCurrent = xLast+(i*xUnit);	
+			var xCurrent = xLast+(i*xUnit);
 			var yCurrent = yLast+(i*yUnit);
-			var xRandom = xCurrent+(Math.random()-0.5)*brushDiameter*1.2;			
+			var xRandom = xCurrent+(Math.random()-0.5)*brushDiameter*1.2;
 			var yRandom = yCurrent+(Math.random()-0.5)*brushDiameter*1.2;
     		ctx.clearRect( xRandom, yRandom, Math.random()*2+2, Math.random()+1);
 			}
@@ -324,7 +331,7 @@ function chalkboard(){
 		 chalkboard();
 	});
 
-} 
+}
 
 function clearChalk(){
 	var canvas = document.getElementById("chalkboard");
@@ -332,7 +339,7 @@ function clearChalk(){
 	var ecHeight = $(window).height();
 	var ecWidth = $("#leftContent").width();
 	ctx.clearRect(0, 0, ecWidth, ecHeight);
-	
+
 }
 
 
@@ -391,8 +398,8 @@ AmCharts.makeChart("chartdiv2", {
 				"depth3D":10,
 				"angle":30,
                 "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
-            });	
-			
+            });
+
 AmCharts.makeChart("chartdiv3", {
                 "type": "pie",
                 "dataProvider": [{
@@ -418,8 +425,8 @@ AmCharts.makeChart("chartdiv3", {
 				"depth3D":10,
 				"angle":30,
                 "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
-            });	
-			
+            });
+
 AmCharts.makeChart("chartdiv4", {
                 "type": "pie",
                 "dataProvider": [{
@@ -445,8 +452,8 @@ AmCharts.makeChart("chartdiv4", {
 				"depth3D":10,
 				"angle":30,
                 "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
-            });	
-			
+            });
+
 AmCharts.makeChart("chartdiv5", {
                 "type": "pie",
                 "dataProvider": [{
@@ -472,29 +479,29 @@ AmCharts.makeChart("chartdiv5", {
 				"depth3D":10,
 				"angle":30,
                 "balloonText": "[[title]]<br><span style='font-size:14px;'>[[percents]]%</span>"
-            });						
-			
+            });
+
 function removeProAnimation(){
 	$(".progress1Animation").css("-webkit-animation-play-state","paused");
 	$(".progress1Animation").css("animation-play-state","paused");
 	$(".chart1Animation").css("-webkit-animation-play-state","paused");
 	$(".chart1Animation").css("animation-play-state","paused");
-	
+
 	$(".progress2Animation").css("-webkit-animation-play-state","paused");
 	$(".progress2Animation").css("animation-play-state","paused");
 	$(".chart2Animation").css("-webkit-animation-play-state","paused");
 	$(".chart2Animation").css("animation-play-state","paused");
-	
+
 	$(".progress3Animation").css("-webkit-animation-play-state","paused");
 	$(".progress3Animation").css("animation-play-state","paused");
 	$(".chart3Animation").css("-webkit-animation-play-state","paused");
 	$(".chart3Animation").css("animation-play-state","paused");
-	
+
 	$(".progress4Animation").css("-webkit-animation-play-state","paused");
 	$(".progress4Animation").css("animation-play-state","paused");
 	$(".chart4Animation").css("-webkit-animation-play-state","paused");
 	$(".chart4Animation").css("animation-play-state","paused");
-	
+
 	$(".progress5Animation").css("-webkit-animation-play-state","paused");
 	$(".progress5Animation").css("animation-play-state","paused");
 	$(".chart5Animation").css("-webkit-animation-play-state","paused");
@@ -506,25 +513,24 @@ function addProAnimation(){
 	$(".progress1Animation").css("animation-play-state","running");
 	$(".chart1Animation").css("-webkit-animation-play-state","running");
 	$(".chart1Animation").css("animation-play-state","running");
-	
+
 	$(".progress2Animation").css("-webkit-animation-play-state","running");
 	$(".progress2Animation").css("animation-play-state","running");
 	$(".chart2Animation").css("-webkit-animation-play-state","running");
 	$(".chart2Animation").css("animation-play-state","running");
-	
+
 	$(".progress3Animation").css("-webkit-animation-play-state","running");
 	$(".progress3Animation").css("animation-play-state","running");
 	$(".chart3Animation").css("-webkit-animation-play-state","running");
 	$(".chart3Animation").css("animation-play-state","running");
-	
+
 	$(".progress4Animation").css("-webkit-animation-play-state","running");
 	$(".progress4Animation").css("animation-play-state","running");
 	$(".chart4Animation").css("-webkit-animation-play-state","running");
 	$(".chart4Animation").css("animation-play-state","running");
-	
+
 	$(".progress5Animation").css("-webkit-animation-play-state","running");
 	$(".progress5Animation").css("animation-play-state","running");
 	$(".chart5Animation").css("-webkit-animation-play-state","running");
 	$(".chart5Animation").css("animation-play-state","running");
 }
-
